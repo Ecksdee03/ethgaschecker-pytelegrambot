@@ -95,7 +95,7 @@ def send_welcome(msg):
 
 @bot.message_handler(commands = ['gas'])
 def gas_fees(msg):
-	bot.send_message(msg.chat.id, gasfees())
+	bot.send_message(msg.chat.id, gasfees(), disable_web_page_preview=True)
 
 @bot.message_handler(commands = ['price'])
 def eth_price(msg):
@@ -112,8 +112,8 @@ def helpme(msg):
 # 	except:
 # 		sleep(1)
 
-#Setting up of webhooks for hosting on Heroku server
-#See if the environment variable Heroku (how to add it, see below)
+Setting up of webhooks for hosting on Heroku server
+See if the environment variable Heroku (how to add it, see below)
 if "HEROKU" in list(os.environ.keys()):
     logger = telebot.logger
     telebot.logger.setLevel(logging.INFO)
