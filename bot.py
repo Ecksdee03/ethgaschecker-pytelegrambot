@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from telebot import types
 from telebot.types import ReplyKeyboardMarkup as rkm
 from time import sleep
-# from flask import Flask, request
+from flask import Flask, request
 import logging
 
 #initialise bot objects
@@ -12,6 +12,7 @@ TOKEN = os.getenv('BOT_TOKEN')
 bot = telebot.TeleBot(token=TOKEN, parse_mode = "HTML")
 ethscan_token = os.getenv('ETHERSCAN_TOKEN')
 
+server = Flask(__name__)
 print("Bot started successfully! Running now..")
 
 #Fetching data with Python request library
@@ -126,5 +127,5 @@ def helpme(msg):
 #     bot.set_webhook(url='https://glacial-bayou-22780.herokuapp.com/' + TOKEN)
 #     return "!", 200
 
-# if __name__ == "__main__":
-#     server.run(host="0.0.0.0", port=int(os.environ.get('PORT')))
+if __name__ == "__main__":
+    server.run(host="0.0.0.0", port=int(os.environ.get('PORT')))
