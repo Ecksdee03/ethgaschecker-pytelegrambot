@@ -11,7 +11,7 @@ load_dotenv()
 TOKEN = os.getenv('BOT_TOKEN')
 bot = telebot.TeleBot(token=TOKEN, parse_mode = "HTML")
 ethscan_token = os.getenv('ETHERSCAN_TOKEN')
-
+print("Bot is running now!")
 server = Flask(__name__)
 
 #Fetching data with Python request library
