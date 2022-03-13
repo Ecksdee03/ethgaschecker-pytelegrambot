@@ -4,7 +4,7 @@ from telebot import types
 from telebot.types import ReplyKeyboardMarkup as rkm
 from time import sleep
 from flask import Flask, request
-from keep_alive import app
+import keep_alive
 
 #initialise bot objects
 load_dotenv()
@@ -104,7 +104,6 @@ def eth_price(msg):
 def helpme(msg):
 	bot.send_message(msg.chat.id, donate)
 
-keep_alive.keep_alive()
 bot.polling()
 
 # while True:
