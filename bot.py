@@ -2,17 +2,15 @@ import telebot, os, requests
 from dotenv import load_dotenv
 from telebot import types
 from telebot.types import ReplyKeyboardMarkup as rkm
-from time import sleep
-from flask import Flask, request
-import keep_alive
+from keep_alive import app
+import threading
 
-#initialise bot objects
+#fetch api keys and initialise bot object
 load_dotenv()
 TOKEN = os.getenv('BOT_TOKEN')
 bot = telebot.TeleBot(token=TOKEN, parse_mode = "HTML")
-ethscan_token = os.getenv('ETHERSCAN_TOKEN')
+ethscan_token = os.getenv('ETH_TOKEN')
 print("Bot is running now!")
-server = Flask(__name__)
 
 #Fetching data with Python request library
 gasurl = "https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey={}".format(ethscan_token)
@@ -73,12 +71,13 @@ def gasfees():
 
 	return gasinfo
 
+#conversion of gas price unit gwei to usd
 def gweitousd(gwei):
 	ethprice = round(ethdata['ethereum']['usd'], 2)
 	usdp = gwei * ethprice * 1.00E-9 * 21000
 	return usdp
 
-#configure msg commands
+#configure functions run by user msg commands
 #note: handlers are tested in the order declared
 @bot.message_handler(commands=['start', 'cmds'])
 def send_welcome(msg):
@@ -104,30 +103,7 @@ def eth_price(msg):
 def helpme(msg):
 	bot.send_message(msg.chat.id, donate)
 
+#opens server in the background
+threading.Thread(target=lambda: app.run(host='0.0.0.0')).start()
+#bot continuously polls for new msgs from user
 bot.polling()
-
-# while True:
-# 	try:
-# 		bot.infinity_polling(skip_pending=True)
-# 		telebot.apihelper.SESSION_TIME_TO_LIVE = 2000
-# 	except:
-# 		sleep(1)
-
-#Setting up of webhooks for hosting on Heroku server
-
-# @server.route('/' + TOKEN, methods=['POST'])
-# def getMessage():
-#     json_string = request.get_data().decode('utf-8')
-#     update = telebot.types.Update.de_json(json_string)
-#     bot.process_new_updates([update])
-#     return "!", 200
-
-# @server.route("/")
-# def webhook():
-#     bot.remove_webhook()
-#     bot.set_webhook(url='https://glacial-bayou-22780.herokuapp.com/' + TOKEN)
-#     return "Hello World!"
-#     return "!", 200
-
-# if __name__ == "__main__":
-#     server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))

@@ -1,3 +1,4 @@
+#configures web server to run at same time as Bot so it runs in background
 from flask import Flask
 from threading import Thread
 
