@@ -4,7 +4,7 @@ A simple telegram bot used to check live Ethereum prices and gas fees for differ
 
 ## Getting Started
 
-This bot is built with pyTelegramBotAPI - A simple, but extensible Python implementation for the [Telegram Bot API](https://core.telegram.org/bots/api). This API is tested with Python 3.6-3.10 and Pypy 3. 
+This bot is built with [pyTelegramBotAPI](https://github.com/eternnoir/pyTelegramBotAPI) - A simple, but extensible Python implementation for the [Telegram Bot API](https://core.telegram.org/bots/api). It is hosted on a replit web server using Flask. This API is tested with Python 3.6-3.10 and Pypy 3. 
 
 Download using:
 
@@ -28,6 +28,8 @@ Furthermore, you should have basic knowledge of the Python programming language 
 ## Set up and deploy bot on replit
 [Create new project](https://replit.com/~) using python or just clone this Git repository.
 
-Run code and test your bot. Bot should welcome you to the room.
+Run code by using `python bot.py` and configuring it to the native run command on replit and test your bot. 
+
+Add your API keys `BOT_TOKEN` and `ETH_TOKEN` to the environment variables page on replit
 
 You can publish the repl, run it and close the tab and your bot will keep running in the background 24/7 for free!!
