@@ -127,10 +127,5 @@ def webhook():
     return "Hello World!"
     return "!", 200
 
-@server.route("/generate/<path:address>/")
-def generate(address):
-    if not (address.startswith("http://") or address.startswith("https://")):
-        address = "http://" + address
-
 if __name__ == "__main__":
     server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
