@@ -33,3 +33,5 @@ Run code by using `python bot.py` and configuring it to the native run command o
 Add your API keys `BOT_TOKEN` and `ETH_TOKEN` to the environment variables page on replit
 
 You can publish the repl, run it and close the tab and your bot will keep running in the background 24/7 for free!!
+
+To check if the bot is running in background, you can make an account on [Uptime Robot](https://uptimerobot.com/) and put a monitor on your repl url. It should stay up.
