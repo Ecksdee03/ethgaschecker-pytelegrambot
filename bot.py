@@ -28,12 +28,8 @@ Made by @Jhw0ng
 
 donate = '''Any amount of donation to my developer will be much appreciated!＼(＾▽＾)／
 They will be used to support more features for me!
-<b>ETH Address:</b>
-<b>BTC Address:</b>
-<b>LUNA Address:</b>
-<b>FTM Address:</b>
-<b>DOGE Address:</b>
-<b>MATIC Address:</b>
+<b>ETH Address:</b> 0x08BD6b1c3834bd578fcfe53fbCB35f9b516c5372
+<b>BTC Address:</b> bc1q92pz4ut6460yyu5umjq5jmpn2klqd5lgfey8vn
 '''
 
 
