@@ -35,3 +35,6 @@ Add your API keys `BOT_TOKEN` and `ETH_TOKEN` to the environment variables page 
 You can publish the repl, run it and close the tab and your bot will keep running in the background 24/7 for free!!
 
 To check if the bot is running in background, you can make an account on [Uptime Robot](https://uptimerobot.com/) and put a monitor on your repl url. It should stay up.
+
+![Screenshot (444)](https://user-images.githubusercontent.com/77221369/158120895-b6694392-9e9a-4605-a57d-770719c0812b.png)
+![Screenshot (445)](https://user-images.githubusercontent.com/77221369/158120904-d9905412-8e93-4582-abda-ef97c8b1341d.png)
