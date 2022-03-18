@@ -8,7 +8,7 @@ This bot is built with [pyTelegramBotAPI](https://github.com/eternnoir/pyTelegra
 
 Download using:
 
-`python -m pip install pyTelegramBotAPI`
+`pip install pyTelegramBotAPI`
 
 Download these Python libraries too: flask, requests, telebot
 
