@@ -1,6 +1,6 @@
 ## ethgascheckerbot
 
-A simple telegram bot used to check live Ethereum prices and gas fees for different speeds on the Ethereum blockchain, using live data from [Etherscan.io](https://etherscan.io/). New features are planned to be added in the future, such as setting notifications for custom gas or ETH prices.
+A simple telegram bot used to check live Ethereum prices and gas fees for different speeds on the Ethereum blockchain, using live data from [Etherscan.io](https://etherscan.io/).
 
 ## Getting Started
 
