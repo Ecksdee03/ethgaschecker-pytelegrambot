@@ -36,5 +36,7 @@ You can publish the repl, run it and close the tab and your bot will keep runnin
 
 To check if the bot is running in background, you can make an account on [Uptime Robot](https://uptimerobot.com/) and put a monitor on your repl url. It should stay up.
 
+Once that is done, you should be able to access the Telegram bot at @EthGasCheckerBot on Telegram and access its commands.
+
 ![Screenshot (444)](https://user-images.githubusercontent.com/77221369/158120895-b6694392-9e9a-4605-a57d-770719c0812b.png)
 ![Screenshot (445)](https://user-images.githubusercontent.com/77221369/158120904-d9905412-8e93-4582-abda-ef97c8b1341d.png)
